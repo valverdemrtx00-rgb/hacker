@@ -89,3 +89,11 @@ p {
 .fancy1, .fancy2, .fancy3 {
     animation: fadeUp 0.6s ease forwards, rgbBorder 4s infinite linear;
 }
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
