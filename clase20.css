@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #000000);
+    color: white;
+}
+
+/* EFECTO RGB ANIMADO 🔥 */
+@keyframes rgbBorder {
+    0% { border-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+    25% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
+    50% { border-color: #00ffff; box-shadow: 0 0 15px #00ffff; }
+    75% { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
+    100% { border-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+}
+
+/* TARJETAS */
+.fancy1, .fancy2, .fancy3 {
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+
+    border: 2px solid;
+    animation: rgbBorder 4s infinite linear;
+
+    transition: all 0.3s ease;
+}
+
+/* EFECTO HOVER PRO */
+.fancy1:hover,
+.fancy2:hover,
+.fancy3:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 0 25px white;
+}
+
+/* TEXTO NEÓN */
+.fancy1 {
+    color: #ff4e50;
+    text-shadow: 0 0 10px #ff4e50;
+}
+
+.fancy2 {
+    color: #00c9ff;
+    text-shadow: 0 0 10px #00c9ff;
+}
+
+.fancy3 {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+/* PÁRRAFOS */
+p {
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    width: 75%;
+
+    background: rgba(0,0,0,0.5);
+    border: 1px solid #00ffea;
+
+    color: #00ffea;
+    text-shadow: 0 0 8px #00ffea;
+
+    box-shadow: 0 0 10px #00ffea;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fancy1, .fancy2, .fancy3 {
+    animation: fadeUp 0.6s ease forwards, rgbBorder 4s infinite linear;
+}
